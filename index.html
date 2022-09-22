@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <title>Adivinhe o número</title>
+    <title>Adivinhe o nÃºmero</title>
     <style>
        *{
         box-sizing: border-box;
@@ -98,9 +98,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Adivinhe o número</h1>
-        <p>Tente acertar o número de 1 a 100 que foi sorteado, você terá 10 tentativas.</p>
-        <input type="number" max="100" class="inputChute" placeholder="Digite o número">
+        <h1>Adivinhe o nÃºmero</h1>
+        <p>Tente acertar o nÃºmero de 1 a 100 que foi sorteado, vocÃª terÃ¡ 10 tentativas.</p>
+        <input type="number" max="100" class="inputChute" placeholder="Digite o nÃºmero">
         <input type="button" class="buttonChute" value="Chutar">
         <div class="divChutes"></div>
         <div class="alerta"></div>
@@ -117,7 +117,7 @@
         let btnNovoJogo = document.querySelectorAll('.btnJogarNovamente');
         let h1 = document.querySelector('h1');
         let nRandomico = Math.floor(Math.random() * 101);
-        console.log(`Número Randomico ${nRandomico}`);
+        //console.log(`NÃºmero Randomico ${nRandomico}`);
         let contChutes = 1;
         
         function desabilitar(){
@@ -126,14 +126,14 @@
             buttonChute.disabled = true;
         }
         function perdeu(){
-            dica.innerText='Não foi dessa vez! Seus chutes acabaram e você não acertou o número.';
+            dica.innerText='NÃ£o foi dessa vez! Seus chutes acabaram e vocÃª nÃ£o acertou o nÃºmero.';
             dica.style.color = 'tomato';
             h1.style.color = 'tomato';
             getContainer.style.border = '2px solid tomato';
             desabilitar();
         }
         function ganhou(){
-            dica.innerText='Você acertou o chute, parabéns!';
+            dica.innerText='VocÃª acertou o chute, parabÃ©ns!';
             dica.style.color = 'green';
             h1.style.color = 'green';
             getContainer.style.border = '2px solid green';
@@ -150,7 +150,7 @@
            /***cria as divs e mostra os chutes na tela****/
            if(inputChute.value.trim().length>0){
                     if(contChutes == 1){
-                    getDivChutes.textContent = 'Últimos chutes: ';
+                    getDivChutes.textContent = 'Ãšltimos chutes: ';
                     }    
                     const addSpan = document.createElement('span'); 
                     addSpan.classList.add('spanChutes');
@@ -165,7 +165,7 @@
                         ganhou();
                         jogarNovamente();
                     }else if(chute>nRandomico){
-                        dica.innerText='seu chute está alto';
+                        dica.innerText='seu chute estÃ¡ alto';
                         dica.style.color = 'darksalmon';
                         h1.style.color = 'darksalmon';
                         getContainer.style.border = '2px solid darksalmon';
@@ -175,7 +175,7 @@
                         
                         
                     }else if(chute<nRandomico){
-                        dica.innerText='seu chute está baixo';
+                        dica.innerText='seu chute estÃ¡ baixo';
                         dica.style.color = 'darkkhaki';
                         h1.style.color = 'darkkhaki';
                         getContainer.style.border = '2px solid darkkhaki';
@@ -216,7 +216,7 @@
             getContainer.removeAttribute('style');
             inputChute.removeAttribute('style');
             btnNovoJogo.remove();
-            console.log(`Número Randomico ${nRandomico}`);
+            
         }
         buttonChute.addEventListener("click", chutar);
         inputChute.addEventListener("change", inputChange);
