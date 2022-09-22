@@ -1,2 +1,5 @@
 # js-adivinhe-o-numero
- Prática Javascript baseado na documentação MDN
+ Estudo prático de Javascript baseado na documentação MDN.
+ Veja o demo em: https://jogo-js-adivinhe-o-numero.netlify.app/
+ Divirta-se!
+
